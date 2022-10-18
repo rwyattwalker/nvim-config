@@ -29,5 +29,5 @@ map('n', '<leader>hh',"<CMD>bprevious<CR>")
 -- Delete Buffer
 map('n', '<leader>--', "<CMD>Bdelete<CR>")
 --Toggle terminal
-map('n', '<C-T>',"<CMD>ToggleTerm direction=horizontal<CR>")
+map('n', '<leader>T',"<CMD>ToggleTerm direction=float<CR>")
 

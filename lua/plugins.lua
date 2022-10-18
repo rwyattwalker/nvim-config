@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
     max_name_length = 14,
     max_prefix_length = 13,
     tab_size = 20,
-    separator_style = "thin",
+    separator_style = "thick",
     },
   }
   --Buffer Delete
@@ -85,7 +85,6 @@ return require('packer').startup(function(use)
 
   -- Productivity --
   use 'vimwiki/vimwiki'
-  use 'jreybert/vimagit'
   use {'nvim-orgmode/orgmode',
        config = function()
           require('orgmode').setup{
@@ -140,10 +139,11 @@ return require('packer').startup(function(use)
   -- Junegunn Choi Plugins --
   use 'junegunn/goyo.vim'
   use 'junegunn/limelight.vim'
-  use 'junegunn/vim-emoji'
 
   -- Colorschemes --
+  use "EdenEast/nightfox.nvim"
   use 'RRethy/nvim-base16'
+  use "ellisonleao/gruvbox.nvim"
   use 'kyazdani42/nvim-palenight.lua'
   -- LSP
  use {
@@ -161,7 +161,11 @@ use "williamboman/nvim-lsp-installer"
         }
     }
 })
-
+  --Git Integration
+   use {
+  'lewis6991/gitsigns.nvim',
+  }
+  require('gitsigns').setup()
   --Auto Complete
   use {
     'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-nvim-lsp',
