@@ -9,7 +9,7 @@ require("plugins")
 -------------------------------------------------
 local ok, _ = pcall(vim.cmd, 'colorscheme base16-gruvbox-dark-hard')
 -------------------------------------------------
--- DASHBOARD
+-- DASHBOARD --
 -------------------------------------------------
 local db = require('dashboard')
 db.default_banner = {
